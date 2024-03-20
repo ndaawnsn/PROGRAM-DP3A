@@ -18,8 +18,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>Lapor | Dispendukcapil Bangkalan</title>
-    <link rel="shortcut icon" href="images/favicon.ico">
+    <title>LABRAK | DP3A Kota Manado</title>
+    <link rel="shortcut icon" href="images/pemkot.png">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.css">
     <!-- font Awesome CSS -->
@@ -35,14 +35,15 @@
             <div class="container-fluid">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1">
                         <span class="sr-only">Toggle navigation</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand" href="index">
-                        <img alt="Brand" src="images/bangkalan.png">
+                        <img alt="Brand" src="images/pemkot.png">
                     </a>
                 </div>
 
@@ -52,22 +53,8 @@
                         <li><a href="index">HOME</a></li>
                         <li class="active"><a href="lapor">LAPOR</a></li>
                         <li><a href="lihat">LIHAT PENGADUAN</a></li>
-                        <li><a href="cara">CARA</a></li>
-                        <li class="dropdown">
-                            <a href="profildinas" class="dropdown-toggle" data-toggle="dropdown">PROFIL DINAS <span class="caret"></span></a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="profildinas">Profil Dinas</a></li>
-                                <li class="divider"></li>
-                                <li><a href="profildinas">Visi dan Misi</a></li>
-                                <li class="divider"></li>
-                                <li><a href="profildinas">Struktur Organisasi</a></li>
-                                <li class="divider"></li>
-                                <li><a href="profildinas">Motto / Maklumat Pelayanan</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="faq">FAQ</a></li>
-                        <li><a href="bantuan">BANTUAN</a></li>
                         <li><a href="kontak">KONTAK</a></li>
+                        <li><a href="bantuan">LOGIN</a></li>
                     </ul>
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
@@ -78,7 +65,7 @@
         <div class="main-content">
 
             <h3>Buat Laporan</h3>
-            <hr/>
+            <hr />
             <div class="row">
                 <div class="col-md-8 card-shadow-2 form-custom">
                     <form class="form-horizontal" role="form" method="post" action="private/validasi">
@@ -86,8 +73,10 @@
                             <label for="nomor" class="col-sm-3 control-label">Nomor Pengaduan</label>
                             <div class="col-sm-9">
                                 <div class="input-group">
-                                    <div class="input-group-addon"><span class="glyphicon glyphicon-exclamation-sign"></span></div>
-                                    <input type="text" class="form-control" id="nomor" name="nomor" value="<?php echo $max_id; ?>" readonly>
+                                    <div class="input-group-addon"><span
+                                            class="glyphicon glyphicon-exclamation-sign"></span></div>
+                                    <input type="text" class="form-control" id="nomor" name="nomor"
+                                        value="<?php echo $max_id; ?>" readonly>
                                 </div>
                             </div>
                         </div>
@@ -96,7 +85,8 @@
                             <div class="col-sm-9">
                                 <div class="input-group">
                                     <div class="input-group-addon"><span class="glyphicon glyphicon-user"></span></div>
-                                    <input type="text" class="form-control" id="nama" name="nama" placeholder="Nama Lengkap" value="<?= @$_GET['nama'] ?>" required>
+                                    <input type="text" class="form-control" id="nama" name="nama"
+                                        placeholder="Nama Lengkap" value="<?= @$_GET['nama'] ?>" required>
                                 </div>
                                 <p class="error"><?= @$_GET['namaError'] ?></p>
                             </div>
@@ -105,8 +95,10 @@
                             <label for="email" class="col-sm-3 control-label">Email</label>
                             <div class="col-sm-9">
                                 <div class="input-group">
-                                    <div class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></div>
-                                    <input type="email" class="form-control" id="email" name="email" placeholder="example@domain.com" value="<?= @$_GET['email'] ?>" required>
+                                    <div class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span>
+                                    </div>
+                                    <input type="email" class="form-control" id="email" name="email"
+                                        placeholder="example@domain.com" value="<?= @$_GET['email'] ?>" required>
                                 </div>
                                 <p class="error"><?= @$_GET['emailError'] ?></p>
                             </div>
@@ -116,7 +108,8 @@
                             <div class="col-sm-9">
                                 <div class="input-group">
                                     <div class="input-group-addon"><span class="glyphicon glyphicon-phone"></span></div>
-                                    <input type="text" class="form-control" id="telpon" name="telpon" placeholder="087123456789" value="<?= @$_GET['telpon'] ?>" required>
+                                    <input type="text" class="form-control" id="telpon" name="telpon"
+                                        placeholder="087123456789" value="<?= @$_GET['telpon'] ?>" required>
                                 </div>
                                 <p class="error"><?= @$_GET['telponError'] ?></p>
                             </div>
@@ -126,7 +119,8 @@
                             <div class="col-sm-9">
                                 <div class="input-group">
                                     <div class="input-group-addon"><span class="glyphicon glyphicon-home"></span></div>
-                                    <input type="text" class="form-control" id="alamat" name="alamat" placeholder="Alamat" value="<?= @$_GET['alamat'] ?>" required>
+                                    <input type="text" class="form-control" id="alamat" name="alamat"
+                                        placeholder="Alamat" value="<?= @$_GET['alamat'] ?>" required>
                                 </div>
                                 <p class="error"><?= @$_GET['alamatError'] ?></p>
                             </div>
@@ -135,7 +129,8 @@
                             <label for="tujuan" class="col-sm-3 control-label">Tujuan Pengaduan</label>
                             <div class="col-sm-9">
                                 <div class="input-group">
-                                    <div class="input-group-addon"><span class="glyphicon glyphicon-random"></span></div>
+                                    <div class="input-group-addon"><span class="glyphicon glyphicon-random"></span>
+                                    </div>
                                     <select class="form-control" name="tujuan">
                                         <option value="1">Pelayanan Pendaftaran Penduduk</option>
                                         <option value="2">Pelayanan Pencatatan Sipil</option>
@@ -149,15 +144,19 @@
                             <label for="pengaduan" class="col-sm-3 control-label">Isi Pengaduan</label>
                             <div class="col-sm-9">
                                 <div class="input-group">
-                                    <div class="input-group-addon"><span class="glyphicon glyphicon-pencil"></span></div>
-                                    <textarea class="form-control" rows="4" name="pengaduan" placeholder="Tuliskan Isi Pengaduan" required><?= @$_GET['pengaduan'] ?></textarea>
+                                    <div class="input-group-addon"><span class="glyphicon glyphicon-pencil"></span>
+                                    </div>
+                                    <textarea class="form-control" rows="4" name="pengaduan"
+                                        placeholder="Tuliskan Isi Pengaduan"
+                                        required><?= @$_GET['pengaduan'] ?></textarea>
                                 </div>
                                 <p class="error"><?= @$_GET['pengaduanError'] ?></p>
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="col-sm-10 col-sm-offset-3">
-                                <input id="submit" name="submit" type="submit" value="Kirim Pengaduan" class="btn btn-primary-custom form-shadow">
+                                <input id="submit" name="submit" type="submit" value="Kirim Pengaduan"
+                                    class="btn btn-primary-custom form-shadow">
                             </div>
                         </div>
                         <div class="form-group">
@@ -176,7 +175,10 @@
             </a>
             <script>
             // When the user scrolls down 100px from the top of the document, show the button
-            window.onscroll = function() {scrollFunction()};
+            window.onscroll = function() {
+                scrollFunction()
+            };
+
             function scrollFunction() {
                 if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
                     document.getElementById("top").style.display = "block";
@@ -210,8 +212,8 @@
                         </li>
                     </ul>
                     <p class="mb-0">
-                        Jalan Soekarno-Hatta No 50
-                        <br>Bangkalan, Jawa Timur
+                        Jl. Balaikota No.01 Tikala Ares
+                        <br>Manado, Sulawesi Utara
                     </p>
                 </div>
                 <div class="col-md-4 mb-5 mb-lg-0">
@@ -225,13 +227,21 @@
                     </ul>
                     <ul class="list-inline mb-0">
                         <li class="list-inline-item">
-                            <a class="btn btn-outline-light btn-social text-center rounded-circle" href="https://www.facebook.com/dispendukcapilbkl/">
+                            <a class="btn btn-outline-light btn-social text-center rounded-circle"
+                                href="https://www.facebook.com/profile.php?id=100058956600011&mibextid=uzlsIk/">
                                 <i class="fa fa-fw fa-facebook"></i>
                             </a>
                         </li>
                         <li class="list-inline-item">
-                            <a class="btn btn-outline-light btn-social text-center rounded-circle" href="https://twitter.com/disdukcapilbkl">
-                                <i class="fa fa-fw fa-twitter"></i>
+                            <a class="btn btn-outline-light btn-social text-center rounded-circle"
+                                href="https://www.instagram.com/uptdppa.manado?igsh=ZWI2YzEzYmMxYg==">
+                                <i class="fa fa-fw fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="btn btn-outline-light btn-social text-center rounded-circle"
+                                href="https://wa.me/6285220044323">
+                                <i class="fa fa-send-o"></i>
                             </a>
                         </li>
                     </ul>
@@ -246,9 +256,9 @@
                         </li>
                     </ul>
                     <p class="mb-0">
-                        031-3095331 <br>
-                        dispendukcapil@bangkalankab.go.id <br>
-                        dispendukcapil.bangkalan@gmail.com
+                        Call Center 112 (BEBAS PULSA)<br>
+                        0852-2004-4323<br>
+                        dpppa.manadokota.go.id
                     </p>
                 </div>
             </div>

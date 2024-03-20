@@ -17,8 +17,8 @@ function RandomAvatar(){
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>Dispendukcapil Bangkalan</title>
-    <link rel="shortcut icon" href="images/favicon.ico">
+    <title>LABRAK</title>
+    <link rel="shortcut icon" href="images/pemkot.png">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.css">
     <!-- font Awesome CSS -->
@@ -254,8 +254,7 @@ function RandomAvatar(){
                             <p class="mb-0">
                                 Call Center 112 (BEBAS PULSA)<br>
                                 0852-2004-4323<br>
-                                dpppa.manadokota.go.id <br>
-                                dispendukcapil.bangkalan@gmail.com
+                                dpppa.manadokota.go.id
                             </p>
                         </div>
                     </div>

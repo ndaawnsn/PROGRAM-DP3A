@@ -36,11 +36,12 @@ if(isset($_POST['submit'])) {
 ?>
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>Lihat Pengaduan | Dispendukcapil Bangkalan</title>
-    <link rel="shortcut icon" href="images/favicon.ico">
+    <title>LABRAK | DP3A KOTA MANADO</title>
+    <link rel="shortcut icon" href="images/pemkot.png">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.css">
     <!-- font Awesome CSS -->
@@ -65,7 +66,8 @@ if(isset($_POST['submit'])) {
                     <p class="text-center">Nomor Pengaduan Tidak Ditemukan</p>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-danger" onclick="location.href='lihat';" data-dismiss="modal">Tutup</button>
+                    <button type="button" class="btn btn-danger" onclick="location.href='lihat';"
+                        data-dismiss="modal">Tutup</button>
                 </div>
             </div>
         </div>
@@ -74,10 +76,10 @@ if(isset($_POST['submit'])) {
     // alert pengaduan tidak ditemukan
     if(isset($notFound)) {
         ?>
-        <script type="text/javascript">
-        $("#failedmodal").modal();
-        </script>
-        <?php
+    <script type="text/javascript">
+    $("#failedmodal").modal();
+    </script>
+    <?php
     }
     ?>
 
@@ -86,14 +88,15 @@ if(isset($_POST['submit'])) {
             <div class="container-fluid">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1">
                         <span class="sr-only">Toggle navigation</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand" href="index">
-                        <img alt="Brand" src="images/bangkalan.png">
+                        <img alt="Brand" src="images/pemkot.png">
                     </a>
                 </div>
 
@@ -103,22 +106,8 @@ if(isset($_POST['submit'])) {
                         <li><a href="index">HOME</a></li>
                         <li><a href="lapor">LAPOR</a></li>
                         <li class="active"><a href="lihat">LIHAT PENGADUAN</a></li>
-                        <li><a href="cara">CARA</a></li>
-                        <li class="dropdown">
-                            <a href="profildinas" class="dropdown-toggle" data-toggle="dropdown">PROFIL DINAS <span class="caret"></span></a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="profildinas">Profil Dinas</a></li>
-                                <li class="divider"></li>
-                                <li><a href="profildinas">Visi dan Misi</a></li>
-                                <li class="divider"></li>
-                                <li><a href="profildinas">Struktur Organisasi</a></li>
-                                <li class="divider"></li>
-                                <li><a href="profildinas">Motto / Maklumat Pelayanan</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="faq">FAQ</a></li>
-                        <li><a href="bantuan">BANTUAN</a></li>
                         <li><a href="kontak">KONTAK</a></li>
+                        <li><a href="bantuan">LOGIN</a></li>
                     </ul>
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
@@ -127,7 +116,7 @@ if(isset($_POST['submit'])) {
         <!-- content -->
         <div class="main-content">
             <h3>Lihat Pengaduan</h3>
-            <hr/>
+            <hr />
             <div class="row">
                 <div class="col-md-6 card-shadow-2 form-custom">
                     <form class="form-horizontal" role="form" method="post">
@@ -135,15 +124,18 @@ if(isset($_POST['submit'])) {
                             <label for="nomor" class="col-sm-4 control-label">Nomor Pengaduan</label>
                             <div class="col-sm-8">
                                 <div class="input-group">
-                                    <div class="input-group-addon"><span class="glyphicon glyphicon-exclamation-sign"></span></div>
-                                    <input type="text" class="form-control" id="nomor" name="nomor" placeholder="Masukkan Nomor Pengaduan" required>
+                                    <div class="input-group-addon"><span
+                                            class="glyphicon glyphicon-exclamation-sign"></span></div>
+                                    <input type="text" class="form-control" id="nomor" name="nomor"
+                                        placeholder="Masukkan Nomor Pengaduan" required>
                                 </div>
                                 <p class="error"><?= @$nomorError ?></p>
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="col-sm-8 col-sm-offset-4">
-                                <input id="submit" name="submit" type="submit" value="Lihat Pengaduan" class="btn btn-primary-custom form-shadow">
+                                <input id="submit" name="submit" type="submit" value="Lihat Pengaduan"
+                                    class="btn btn-primary-custom form-shadow">
                             </div>
                         </div>
                     </form>
@@ -160,40 +152,43 @@ if(isset($_POST['submit'])) {
                     $phpdate = strtotime($mysqldate);
                     $tanggal = date( 'd F Y, H:i:s', $phpdate);
                     ?>
-                    <h3>Hasil Pencarian</h3>
+            <h3>Hasil Pencarian</h3>
 
-                    <div class="row">
-                        <div class="col-md-8">
+            <div class="row">
+                <div class="col-md-8">
 
-                            <div class="panel-body-lihat card-shadow-2">
-                                <div class="row">
-                                    <div class="col-md-4">
-                                        <h3 class="h3-laporan custom">Laporan</h3>
-                                    </div>
-                                    <div class="col-md-8">
-                                        <h4 class="text-muted text-right"><?php echo $key['nama_divisi']; ?></h4>
-                                    </div>
-                                </div>
+                    <div class="panel-body-lihat card-shadow-2">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <h3 class="h3-laporan custom">Laporan</h3>
+                            </div>
+                            <div class="col-md-8">
+                                <h4 class="text-muted text-right"><?php echo $key['nama_divisi']; ?></h4>
+                            </div>
+                        </div>
+                        <hr class="hr-laporan">
+                        <a class="media-left" href="#"><img class="img-circle card-shadow-2 img-sm"
+                                src="images/avatar/avatar1.png"></a>
+                        <div class="media-body">
+                            <div>
+                                <h4 class="text-green profil-name" style="font-family: monospace;">
+                                    <?php echo $key['nama']; ?></h4>
+                                <p class="text-muted text-sm"><i class="fa fa-th fa-fw"></i> - <?php echo $tanggal; ?>
+                                </p>
+                            </div>
+                            <hr class="hr-nama">
+                            <div class="isi-laporan">
+                                <p class="text-justify">
+                                    <?php echo $key['isi']; ?>
+                                </p>
+                            </div>
+                            <hr class="hr-laporan">
+
+                            <!-- Comments -->
+                            <div>
+                                <h3 class="custom">Tindak Lanjut Laporan</h3>
                                 <hr class="hr-laporan">
-                                <a class="media-left" href="#"><img class="img-circle card-shadow-2 img-sm" src="images/avatar/avatar1.png"></a>
-                                <div class="media-body">
-                                    <div>
-                                        <h4 class="text-green profil-name" style="font-family: monospace;"><?php echo $key['nama']; ?></h4>
-                                        <p class="text-muted text-sm"><i class="fa fa-th fa-fw"></i>  -  <?php echo $tanggal; ?></p>
-                                    </div>
-                                    <hr class="hr-nama">
-                                    <div class="isi-laporan">
-                                        <p class="text-justify">
-                                            <?php echo $key['isi']; ?>
-                                        </p>
-                                    </div>
-                                    <hr class="hr-laporan">
-
-                                    <!-- Comments -->
-                                    <div>
-                                        <h3 class="custom">Tindak Lanjut Laporan</h3>
-                                        <hr class="hr-laporan">
-                                        <?php
+                                <?php
                                         // dijalankan ketika $foundreply bernilai true // tanggapan ditemukan
                                         if ($foundreply){
                                             foreach ($stat as $key) {
@@ -202,22 +197,25 @@ if(isset($_POST['submit'])) {
                                                 $tanggal_tanggapan = date( 'd F Y, H:i:s', $phpdatea);
                                                 ?>
 
-                                                <div class="media-block comment">
-                                                    <a class="media-left" href="#"><img class="img-circle card-shadow-2 img-sm" src="images/avatar/avatar2.png"></a>
-                                                    <div class="media-body">
-                                                        <div>
-                                                            <h4 class="text-primary profil-name" style="font-family: monospace;"><?php echo $key['admin']; ?></h4>
-                                                            <p class="text-muted text-sm"><i class="fa fa-th fa-fw"></i>  -  <?php echo $tanggal_tanggapan; ?></p>
-                                                        </div>
-                                                        <hr class="hr-nama-admin">
-                                                        <p class="text-justify">
-                                                            <?php echo $key['isi_tanggapan']; ?>
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!-- media body -->
-                                            <?php
+                                <div class="media-block comment">
+                                    <a class="media-left" href="#"><img class="img-circle card-shadow-2 img-sm"
+                                            src="images/avatar/avatar2.png"></a>
+                                    <div class="media-body">
+                                        <div>
+                                            <h4 class="text-primary profil-name" style="font-family: monospace;">
+                                                <?php echo $key['admin']; ?></h4>
+                                            <p class="text-muted text-sm"><i class="fa fa-th fa-fw"></i> -
+                                                <?php echo $tanggal_tanggapan; ?></p>
+                                        </div>
+                                        <hr class="hr-nama-admin">
+                                        <p class="text-justify">
+                                            <?php echo $key['isi_tanggapan']; ?>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- media body -->
+                            <?php
                                         }
                                     }
                                     // dijalankan ketika $cari bernilai false // tanggapan tidak ditemukan
@@ -225,10 +223,10 @@ if(isset($_POST['submit'])) {
                                         echo "<h5 class=\"text-muted text-lg\"><i class=\"fa fa-exclamation-circle fa-fw\"></i>  Belum Ada Tanggapan</h5>";
                                     }
                                     ?>
-                                </div>
-                                <!-- panel body -->
-                            </div>
-                            <?php
+                        </div>
+                        <!-- panel body -->
+                    </div>
+                    <?php
                         }
                     }
                     ?>
@@ -243,7 +241,10 @@ if(isset($_POST['submit'])) {
             </a>
             <script>
             // When the user scrolls down 100px from the top of the document, show the button
-            window.onscroll = function() {scrollFunction()};
+            window.onscroll = function() {
+                scrollFunction()
+            };
+
             function scrollFunction() {
                 if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
                     document.getElementById("top").style.display = "block";
@@ -267,7 +268,7 @@ if(isset($_POST['submit'])) {
         <hr>
 
         <!-- Footer -->
-        <div class="footer footer-bottom text-center">
+        <footer class="footer text-center">
             <div class="row">
                 <div class="col-md-4 mb-5 mb-lg-0">
                     <ul class="list-inline mb-0">
@@ -279,8 +280,8 @@ if(isset($_POST['submit'])) {
                         </li>
                     </ul>
                     <p class="mb-0">
-                        Jalan Soekarno-Hatta No 50
-                        <br>Bangkalan, Jawa Timur
+                        Jl. Balaikota No.01 Tikala Ares
+                        <br>Manado, Sulawesi Utara
                     </p>
                 </div>
                 <div class="col-md-4 mb-5 mb-lg-0">
@@ -294,13 +295,21 @@ if(isset($_POST['submit'])) {
                     </ul>
                     <ul class="list-inline mb-0">
                         <li class="list-inline-item">
-                            <a class="btn btn-outline-light btn-social text-center rounded-circle" href="https://www.facebook.com/dispendukcapilbkl/">
+                            <a class="btn btn-outline-light btn-social text-center rounded-circle"
+                                href="https://www.facebook.com/profile.php?id=100058956600011&mibextid=uzlsIk/">
                                 <i class="fa fa-fw fa-facebook"></i>
                             </a>
                         </li>
                         <li class="list-inline-item">
-                            <a class="btn btn-outline-light btn-social text-center rounded-circle" href="https://twitter.com/disdukcapilbkl">
-                                <i class="fa fa-fw fa-twitter"></i>
+                            <a class="btn btn-outline-light btn-social text-center rounded-circle"
+                                href="https://www.instagram.com/uptdppa.manado?igsh=ZWI2YzEzYmMxYg==">
+                                <i class="fa fa-fw fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="btn btn-outline-light btn-social text-center rounded-circle"
+                                href="https://wa.me/6285220044323">
+                                <i class="fa fa-send-o"></i>
                             </a>
                         </li>
                     </ul>
@@ -315,13 +324,13 @@ if(isset($_POST['submit'])) {
                         </li>
                     </ul>
                     <p class="mb-0">
-                        031-3095331 <br>
-                        dispendukcapil@bangkalankab.go.id <br>
-                        dispendukcapil.bangkalan@gmail.com
+                        Call Center 112 (BEBAS PULSA)<br>
+                        0852-2004-4323<br>
+                        dpppa.manadokota.go.id
                     </p>
                 </div>
             </div>
-        </div>
+        </footer>
         <!-- /footer -->
 
         <div class="copyright py-4 text-center text-white">
